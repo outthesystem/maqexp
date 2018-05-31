@@ -7,7 +7,9 @@
 
             <!-- Open Search Section -->
             <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
-      
+            <a href="{{url('/dashboard')}}" class="btn btn-circle btn-dual-secondary" >
+                Administracion
+            </a>
             <!-- END Open Search Section -->
 
 
