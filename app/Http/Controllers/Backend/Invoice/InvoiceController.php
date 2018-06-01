@@ -14,11 +14,20 @@ use Carbon\Carbon;
 
 class InvoiceController extends Controller
 {
-    public function makeinvoice()
+    public function makeinvoice(Request $request)
     {
-      $clients = Client::orderBy('name', 'asc')->get();
+      $search = $request->search;
 
-      return view('backend.views.invoice.makeinvoice', compact('clients'));
+      if (isset($search)) {
+        $clients = Client::where('dni', 'like', '%' . $search . '%')
+        ->orderBy('name', 'asc')
+        ->get();
+        }
+        else {
+        $clients = Client::orderBy('name', 'asc')->get();
+        }
+
+      return view('backend.views.invoice.makeinvoice', compact('clients', 'search'));
     }
 
     public function selectproduct(Client $client, Request $request)

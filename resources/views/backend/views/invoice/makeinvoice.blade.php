@@ -16,17 +16,28 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="block block-themed block-rounded">
-                  
+
                       <div class="block-header bg-earth">
                           <h3 class="block-title">Elige tu usuario</h3>
-                          <div class="block-options">
-                              <button type="button" class="btn-block-option">
-                                  <i class="si si-user"></i>
-                              </button>
-                          </div>
                       </div>
                       <div class="block-content">
                           <div class="row">
+                            <div class="col-sm-12">
+                              <form action="{{url('/')}}" method="GET">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-secondary">
+                                                                    <i class="fa fa-search"></i> Buscar
+                                                                </button>
+                                            </div>
+                                            <input type="text" class="form-control" id="example-input1-group2" name="search" placeholder="Buscar..." value="{{$search}}" autofocus>
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                            </div>
                             @foreach ($clients as $c)
                               <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                                 <a class="block block-link-shadow text-center" href="{{url('/selectproduct/'.$c->id)}}">
