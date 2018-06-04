@@ -35,7 +35,7 @@ class ClientController extends Controller
 
           Session::flash('success', 'El cliente ha creado correctamente.');
 
-          return redirect('/clients');
+          return redirect('/clients#add_new_client');
     }
 
     public function edit(Client $client)

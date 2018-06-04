@@ -165,7 +165,7 @@ return [
         */
         Chumper\Zipper\ZipperServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
-
+        RachidLaasri\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
     ],
 
     /*

@@ -16,13 +16,13 @@
                       <div class="form-group row">
                           <label class="col-12" for="example-text-input">Nombre de el cliente</label>
                           <div class="col-md-12">
-                              <input type="text" class="form-control" id="name" name="name" autofocus>
+                              <input type="text" class="form-control" id="name" name="name" autofocus autocomplete="off">
                           </div>
                       </div>
                       <div class="form-group row">
                           <label class="col-12" for="example-text-input">DNI</label>
                           <div class="col-md-12">
-                              <input type="text" class="form-control" id="dni" name="dni">
+                              <input type="text" class="form-control" id="dni" name="dni" autocomplete="off">
                           </div>
                       </div>
                       <div class="form-group row">
